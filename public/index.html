@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Say &amp; Seek Skin</title>
+  <meta name="description" content="A voice-first skin check built on the YouCam AI Skin Analysis API." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>Say &amp; Seek <span>Skin</span></h1>
+    <span id="demoBadge" class="badge" hidden>DEMO DATA</span>
+  </header>
+
+  <main>
+    <!-- 目前狀態：螢幕報讀器會自動唸出更新 -->
+    <section class="status" aria-live="polite">
+      <p id="status" class="status-text">Tap the big button, then just talk.</p>
+      <p id="mic" class="mic" hidden>● Listening…</p>
+    </section>
+
+    <button id="startBtn" class="big primary">Start skin check</button>
+
+    <!-- YouCam JS Camera Kit 的掛載點（官方規定 id 必須是 YMK-module） -->
+    <div id="cameraWrap" hidden>
+      <div id="YMK-module"></div>
+      <p id="hint" class="hint" aria-live="assertive"></p>
+    </div>
+
+    <!-- 相機無法使用時的備援 -->
+    <div id="fallback" class="fallback" hidden>
+      <p>Camera not available. You can choose a selfie instead.</p>
+      <label class="big secondary file">Choose a photo<input id="fileInput" type="file" accept="image/jpeg,image/png" /></label>
+      <button id="demoBtn" class="big secondary" hidden>Use demo result</button>
+    </div>
+
+    <section id="results" class="results" hidden aria-label="Results">
+      <h2>Today’s top 3</h2>
+      <ol id="topList" class="top-list"></ol>
+      <img id="mask" class="mask" alt="" hidden />
+    </section>
+
+    <section id="offer" class="offer" hidden aria-label="Suggested product">
+      <h2>Suggested next step</h2>
+      <p id="offerText" class="offer-name"></p>
+    </section>
+
+    <!-- 每個語音指令都有對應按鈕：給不方便說話的人，也是 demo 備援 -->
+    <nav id="commands" class="commands" hidden aria-label="Voice commands">
+      <button data-say="repeat">Repeat</button>
+      <button data-say="what does it mean" id="explainBtn">What does it mean?</button>
+      <button data-say="recommend">Recommend</button>
+      <button data-say="confirm" class="confirm">Confirm</button>
+      <button data-say="no">No</button>
+      <button data-say="my cart">My cart</button>
+      <button data-say="check my skin">Retake</button>
+    </nav>
+
+    <section id="cartBox" class="cart" hidden aria-label="Cart">
+      <h2>Cart</h2>
+      <ul id="cartList"></ul>
+      <p class="note">Demo shelf only. No real checkout.</p>
+    </section>
+
+    <details class="log">
+      <summary>Conversation</summary>
+      <ol id="log"></ol>
+    </details>
+
+    <p class="disclaimer">Cosmetic skin insights, not a medical diagnosis. Skin analysis by YouCam AI Skin Analysis API.</p>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
