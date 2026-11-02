@@ -1,0 +1,89 @@
+[
+  {
+    "id": "calm-barrier-cream",
+    "name": "Calm Barrier Cream",
+    "price": 24,
+    "tags": [
+      "redness",
+      "moisture"
+    ],
+    "exfoliant": false,
+    "spoken": "a fragrance-free soothing cream that supports the skin barrier",
+    "routine": "Use it morning and night after cleansing."
+  },
+  {
+    "id": "daily-mineral-spf",
+    "name": "Daily Mineral SPF 50",
+    "price": 20,
+    "tags": [
+      "redness",
+      "wrinkle",
+      "texture"
+    ],
+    "exfoliant": false,
+    "spoken": "a mineral sunscreen that is gentle on sensitive skin",
+    "routine": "Apply every morning as the last step, and reapply if you stay outside."
+  },
+  {
+    "id": "hydra-gel-serum",
+    "name": "Hydra Gel Serum",
+    "price": 19,
+    "tags": [
+      "moisture",
+      "wrinkle",
+      "texture"
+    ],
+    "exfoliant": false,
+    "spoken": "a lightweight hydrating serum with hyaluronic acid",
+    "routine": "Pat two drops onto damp skin, then follow with moisturizer."
+  },
+  {
+    "id": "oil-balance-gel",
+    "name": "Oil Balance Gel Moisturizer",
+    "price": 21,
+    "tags": [
+      "oiliness",
+      "pore"
+    ],
+    "exfoliant": false,
+    "spoken": "an oil-free gel moisturizer for shine control",
+    "routine": "Use a pea-sized amount in the morning, focusing on the forehead and nose."
+  },
+  {
+    "id": "gentle-bha-toner",
+    "name": "Gentle BHA Toner",
+    "price": 18,
+    "tags": [
+      "pore",
+      "acne",
+      "texture",
+      "oiliness"
+    ],
+    "exfoliant": true,
+    "spoken": "a mild exfoliating toner for pores and uneven texture",
+    "routine": "Start two or three evenings a week, not every day."
+  },
+  {
+    "id": "spot-care-gel",
+    "name": "Spot Care Gel",
+    "price": 14,
+    "tags": [
+      "acne"
+    ],
+    "exfoliant": false,
+    "spoken": "a small tube of gel you dab only on blemishes",
+    "routine": "Dab a thin layer on blemishes at night."
+  },
+  {
+    "id": "bright-eye-cream",
+    "name": "Bright Eye Cream",
+    "price": 22,
+    "tags": [
+      "dark_circle_v2",
+      "wrinkle"
+    ],
+    "exfoliant": false,
+    "spoken": "a gentle eye cream with caffeine",
+    "routine": "Tap a rice-sized amount under each eye, morning and night."
+  }
+]
