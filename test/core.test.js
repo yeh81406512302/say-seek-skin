@@ -18,6 +18,12 @@ test('YouCam 兩種回傳格式都能解析', () => {
   const a = normalizeResults({ output: [{ type: 'pore', ui_score: 92, raw_score: 95.3, mask_urls: ['u'] }] });
   assert.equal(a.pore.raw, 95.3);
   assert.equal(a.pore.mask, 'u');
+  // 實際回傳會夾帶 all、skin_age、resize_image 這些沒有分數的項目
+  const live = normalizeResults({ output: [
+    { type: 'redness', raw_score: 66.1, ui_score: 75, mask_urls: ['m'] },
+    { type: 'all', score: 87.6 }, { type: 'skin_age', score: 37 }, { type: 'resize_image', mask_urls: ['r'] },
+  ] });
+  assert.deepEqual(Object.keys(live), ['redness']);
   const b = normalizeResults({ redness: { raw_score: 40, ui_score: 60 }, all: { score: 70 }, skin_age: 30 });
   assert.deepEqual(Object.keys(b), ['redness']);
 });
