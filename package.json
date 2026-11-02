@@ -1,0 +1,15 @@
+{
+  "name": "say-seek-skin",
+  "version": "0.1.0",
+  "description": "A voice-first skin check built on the YouCam AI Skin Analysis API, for people who can't rely on the mirror.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "test": "node --test test/core.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
